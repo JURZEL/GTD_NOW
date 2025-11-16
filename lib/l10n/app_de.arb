@@ -68,7 +68,10 @@
   ,"reviewNotesTitle": "Review Notizen"
   ,"backupLabel": "Backup"
   ,"capturedAtLabel": "Erfasst: {date}"
-    ,"exportLabel": "Exportieren"
+  ,"exportLabel": "Exportieren"
+  ,"@exportLabel": { "description": "Label für den Export-Button im Backup-Bereich" }
+  ,"importLabel": "Importieren"
+  ,"@importLabel": { "description": "Label für den Import-Button im Backup-Bereich" }
   ,"aboutDescription": "Eine kleine GTD‑App für Studierende.\n\nDieses Projekt ist Open Source."
   ,"aboutRepositoryTitle": "Repository"
   ,"aboutGithub": "GitHub"
@@ -104,13 +107,12 @@
   ,"onboardingStep3Extra": "Tipp: Plane eine wöchentliche Review‑Zeit ein, um Ordnung zu halten."
   ,"aboutLicenseTitle": "Lizenz"
   ,"aboutLicenseText": "Dieses Projekt wird unter der MIT‑Lizenz verteilt. Siehe die LICENSE‑Datei für Details."
-    ,"@exportLabel": {
-      "description": "Label für den Export-Button im Backup-Bereich"
-    }
-    ,"importLabel": "Importieren"
-    ,"@importLabel": {
-      "description": "Label für den Import-Button im Backup-Bereich"
-    }
+  ,"onboardingSkip": "Überspringen"
+  ,"showOnboardingAgain": "Tutorial erneut anzeigen"
+  ,"showOnboardingAgainTooltip": "Tutorial zurücksetzen und erneut anzeigen"
+  ,"@exportLabel": { "description": "Label für den Export-Button im Backup-Bereich" }
+  ,"importLabel": "Importieren"
+  ,"@importLabel": { "description": "Label für den Import-Button im Backup-Bereich" }
   ,"taskLabel": "Aufgabe"
   ,"somedayLabel": "Vielleicht/Später"
   ,"twoMinuteRuleTitle": "2-Minuten-Regel: sofort erledigen"

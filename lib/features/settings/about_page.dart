@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:gtd_student/l10n/app_localizations.dart';
+import 'package:gtd_student/core/providers.dart';
+import 'package:gtd_student/features/onboarding/onboarding_page.dart';
 
-class AboutPage extends StatelessWidget {
+class AboutPage extends ConsumerWidget {
   const AboutPage({super.key});
 
   static const _repoUrl = 'https://github.com/JURZEL/GTD_NOW';
@@ -17,7 +20,7 @@ class AboutPage extends StatelessWidget {
   }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final loc = AppLocalizations.of(context)!;
     return Scaffold(
       appBar: AppBar(title: Text(loc.appTitle)),
@@ -47,6 +50,19 @@ class AboutPage extends StatelessWidget {
           Text(loc.aboutLicenseTitle, style: Theme.of(context).textTheme.titleMedium),
           const SizedBox(height: 8),
           Text(loc.aboutLicenseText),
+          const SizedBox(height: 12),
+          // Show onboarding again for users who want to re-run the tutorial
+          ListTile(
+            title: Text(AppLocalizations.of(context)!.showOnboardingAgain),
+            subtitle: Text(AppLocalizations.of(context)!.showOnboardingAgainTooltip),
+            leading: const Icon(Icons.school),
+            onTap: () async {
+              // reset the flag so onboarding appears again
+              final navigator = Navigator.of(context);
+              await ref.read(settingsRepositoryProvider).setOnboardingSeen(false);
+              await navigator.push(MaterialPageRoute(builder: (_) => const OnboardingPage()));
+            },
+          ),
         ],
       ),
     );

@@ -100,6 +100,8 @@
   ,"onboardingNext": "Suivant"
   ,"onboardingGetStarted": "Commencer"
   ,"onboardingSkip": "Passer"
+  ,"showOnboardingAgain": "Montrer le tutoriel à nouveau"
+  ,"showOnboardingAgainTooltip": "Réinitialiser et afficher le tutoriel"
   ,"onboardingStep1Extra": "Astuce : gardez les saisies courtes — titre + une ligne suffisent souvent."
   ,"onboardingStep2Extra": "Astuce : prenez des décisions rapides — si c'est <2 minutes, faites‑le tout de suite."
   ,"onboardingStep3Extra": "Astuce : réservez un créneau hebdomadaire pour la revue afin de rester organisé."

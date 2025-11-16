@@ -152,6 +152,8 @@
   ,"onboardingNext": "Next"
   ,"onboardingGetStarted": "Get started"
   ,"onboardingSkip": "Skip"
+  ,"showOnboardingAgain": "Show the tutorial again"
+  ,"showOnboardingAgainTooltip": "Reset and show the onboarding tutorial"
   ,"onboardingStep1Extra": "Tip: Keep captures short — title and a 1‑line note is enough."
   ,"onboardingStep2Extra": "Tip: Use quick decisions — if it takes <2 minutes, do it now."
   ,"onboardingStep3Extra": "Tip: Schedule a weekly review time to keep the system clean."
