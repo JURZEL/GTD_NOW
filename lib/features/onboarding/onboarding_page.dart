@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:gtd_student/l10n/app_localizations.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gtd_student/core/providers.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -132,7 +133,7 @@ class _OnboardingPageState extends ConsumerState<OnboardingPage> {
     final loc = AppLocalizations.of(context)!;
     // Dialog with flag emoji and native language names. These labels are intentionally
     // the native names (Deutsch, English, Français) as requested by the user.
-    final choice = await showDialog<String?>(
+  final choice = await showDialog<String?>(
       context: context,
       barrierDismissible: true,
       builder: (ctx) => AlertDialog(
@@ -148,22 +149,22 @@ class _OnboardingPageState extends ConsumerState<OnboardingPage> {
             Text("Français — Veuillez choisir la langue de l'application."),
           ],
         ),
-        actions: [
+          actions: [
           TextButton(
             onPressed: () => Navigator.of(ctx).pop(null),
             child: Text(AppLocalizations.of(context)!.onboardingSkip),
           ),
           TextButton(
             onPressed: () => Navigator.of(ctx).pop('de_DE'),
-            child: const Text('🇩🇪  Deutsch'),
+            child: Row(children: [SvgPicture.asset('assets/flags/de.svg', width: 24, height: 16), const SizedBox(width: 8), const Text('Deutsch')]),
           ),
           TextButton(
             onPressed: () => Navigator.of(ctx).pop('en_GB'),
-            child: const Text('🇬🇧  English'),
+            child: Row(children: [SvgPicture.asset('assets/flags/en_gb.svg', width: 24, height: 16), const SizedBox(width: 8), const Text('English')]),
           ),
           TextButton(
             onPressed: () => Navigator.of(ctx).pop('fr_FR'),
-            child: const Text('🇫🇷  Français'),
+            child: Row(children: [SvgPicture.asset('assets/flags/fr.svg', width: 24, height: 16), const SizedBox(width: 8), const Text('Français')]),
           ),
         ],
       ),

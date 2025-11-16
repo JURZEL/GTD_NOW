@@ -133,9 +133,11 @@ class _HomeShellState extends ConsumerState<HomeShell> {
     // Show onboarding on first run (if not seen)
     WidgetsBinding.instance.addPostFrameCallback((_) async {
       final repo = ref.read(settingsRepositoryProvider);
-      if (!repo.onboardingSeen()) {
+      final navigator = Navigator.of(context);
+      // Don't push onboarding if another route is on top (e.g., dialog) or if we already pushed it.
+      if (!repo.onboardingSeen() && !navigator.canPop()) {
         // Open onboarding as a full route; when closed, flag is already set by the page.
-        await Navigator.of(context).push(MaterialPageRoute(builder: (_) => const OnboardingPage()));
+        await navigator.push(MaterialPageRoute(builder: (_) => const OnboardingPage()));
       }
     });
   }
