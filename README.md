@@ -56,3 +56,13 @@ Dieses kleine Tutorial erklärt den typischen Workflow, wie die App beim Organis
 
 Wenn du möchtest, kann ich dieses Tutorial noch als separate `TUTORIAL.md` auslagern, mit Screenshots ergänzen oder eine kurze Onboarding‑Seite in der App implementieren.
 
+
+## Image optimizations (docs)
+
+The project's documentation now includes real app screenshots. To keep the docs fast and the repository small we:
+
+- Store the full-size screenshots as modern WebP files under `docs/screenshots/*.webp`.
+- Provide small WebP thumbnails under `docs/screenshots/thumbs_small/` (200px wide) that link to the full-size images.
+
+If you need the original PNG exports they were used to generate the WebP files but are not kept in the repository to save space. You can regenerate or re-capture screenshots using an Android emulator and `adb exec-out screencap -p` if needed.
+
