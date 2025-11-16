@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../core/extensions/date_extensions.dart';
-import '../../core/providers.dart';
+import 'package:gtd_student/core/providers.dart';
 import 'package:gtd_student/l10n/app_localizations.dart';
 import '../../data/models/inbox_item.dart';
 import '../../data/models/task_context.dart';

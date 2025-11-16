@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../../core/providers.dart';
+import 'package:gtd_student/core/providers.dart';
 import 'package:gtd_student/l10n/app_localizations.dart';
 
 class QuickCaptureSheet extends ConsumerStatefulWidget {

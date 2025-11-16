@@ -86,6 +86,15 @@ class FakeNotificationService implements NotificationService {
   Future<void> openAppSettings() async {}
 
   @override
+  Future<void> setLocalizedStrings({
+    required String channelName,
+    required String channelDescription,
+    required String notificationTitleTemplate,
+    required String notificationBody,
+    required String linuxDefaultActionName,
+  }) async {}
+
+  @override
   List<Map<String, dynamic>> getFallbackScheduled() => [];
 
   @override

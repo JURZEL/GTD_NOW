@@ -8,7 +8,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'data/local/hive_boxes.dart';
 
 import 'app.dart';
-import 'core/providers.dart';
+import 'package:gtd_student/core/providers.dart';
 import 'data/local/hive_initializer.dart';
 import 'data/services/notification_service.dart';
 
@@ -33,7 +33,7 @@ Future<void> main() async {
   final systemLocale = ui.PlatformDispatcher.instance.locale;
   final systemTag = systemLocale.toLanguageTag().replaceAll('-', '_');
 
-  final fallbacks = <String>['en_GB', 'en_US', 'de_DE'];
+  final fallbacks = <String>['en_GB', 'en_US', 'de_DE', 'fr_FR'];
 
   final candidates = <String>[];
   if (storedLocale != null) candidates.add(storedLocale);

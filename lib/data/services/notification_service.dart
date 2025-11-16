@@ -15,10 +15,53 @@ class NotificationService {
   bool _initialized = false;
   bool _hasPermissions = false;
   bool _useFallback = false;
+  // Localizable strings used by this service. They can be provided from the app
+  // once a BuildContext / AppLocalizations is available. If not provided,
+  // defaults based on Intl.getCurrentLocale() are used.
+  late String _channelName;
+  late String _channelDescription;
+  late String _notificationTitleTemplate; // expects a template with {title}
+  late String _notificationBody;
+  late String _linuxDefaultActionName;
+
+  /// Set localized strings from a widget context (AppLocalizations). If the
+  /// service is already initialized this will attempt to recreate Android
+  /// channels with the new values.
+  Future<void> setLocalizedStrings({
+    required String channelName,
+    required String channelDescription,
+    required String notificationTitleTemplate,
+    required String notificationBody,
+    required String linuxDefaultActionName,
+  }) async {
+    _channelName = channelName;
+    _channelDescription = channelDescription;
+    _notificationTitleTemplate = notificationTitleTemplate;
+    _notificationBody = notificationBody;
+    _linuxDefaultActionName = linuxDefaultActionName;
+
+    if (_initialized) {
+      await _ensureAndroidChannels();
+    }
+  }
+
+  void _ensureDefaults() {
+    final locale = Intl.getCurrentLocale();
+    final isGerman = locale.toLowerCase().startsWith('de');
+    _channelName = isGerman ? 'Fälligkeiten' : 'Due dates';
+    _channelDescription = isGerman
+        ? 'Benachrichtigungen für anstehende Aufgaben'
+        : 'Notifications for upcoming tasks';
+    _notificationTitleTemplate = isGerman ? 'Fällig: {title}' : 'Due: {title}';
+    _notificationBody = isGerman ? 'Bleib dran – du hast es gleich geschafft!' : "Keep going — you're almost done!";
+    _linuxDefaultActionName = isGerman ? 'Öffnen' : 'Open';
+  }
 
   Future<void> init() async {
     // Decide if we should use fallback storage (Windows/Fuchsia) or native notifications
     _useFallback = _isFallbackPlatform;
+
+    _ensureDefaults();
 
     if (_useFallback) {
       // ensure fallback box exists
@@ -31,9 +74,9 @@ class NotificationService {
     }
 
     const android = AndroidInitializationSettings('@mipmap/ic_launcher');
-    const linux = LinuxInitializationSettings(defaultActionName: 'Öffnen');
+    final linux = LinuxInitializationSettings(defaultActionName: _linuxDefaultActionName);
     const darwin = DarwinInitializationSettings();
-    const settings = InitializationSettings(
+    final settings = InitializationSettings(
       android: android,
       iOS: darwin,
       macOS: darwin,
@@ -74,8 +117,8 @@ class NotificationService {
     final details = NotificationDetails(
       android: AndroidNotificationDetails(
         'due_date_channel',
-        'Fälligkeiten',
-        channelDescription: 'Benachrichtigungen für anstehende Aufgaben',
+  _channelName,
+  channelDescription: _channelDescription,
         importance: Importance.max,
         priority: Priority.high,
       ),
@@ -95,8 +138,8 @@ class NotificationService {
     final scheduled = tz.TZDateTime.from(dueDate, tz.local);
     await _fln.zonedSchedule(
       id.hashCode,
-      'Fällig: $title',
-      'Bleib dran – du hast es gleich geschafft!',
+  _notificationTitleTemplate.replaceAll('{title}', title),
+  _notificationBody,
       scheduled,
       details,
       androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
@@ -178,17 +221,10 @@ class NotificationService {
     final androidImpl =
         _fln.resolvePlatformSpecificImplementation<AndroidFlutterLocalNotificationsPlugin>();
     if (androidImpl == null) return;
-    final locale = Intl.getCurrentLocale();
-    final isGerman = locale.toLowerCase().startsWith('de');
-    final channelName = isGerman ? 'Fälligkeiten' : 'Due dates';
-    final channelDescription = isGerman
-        ? 'Benachrichtigungen für anstehende Aufgaben'
-        : 'Notifications for upcoming tasks';
-
     final channel = AndroidNotificationChannel(
       'due_date_channel',
-      channelName,
-      description: channelDescription,
+  _channelName,
+  description: _channelDescription,
       importance: Importance.max,
     );
 

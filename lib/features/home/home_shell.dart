@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:gtd_student/l10n/app_localizations.dart';
+import 'package:gtd_student/core/providers.dart';
 
 import '../actions/actions_page.dart';
 import '../inbox/inbox_page.dart';
@@ -20,6 +21,7 @@ class HomeShell extends ConsumerStatefulWidget {
 
 class _HomeShellState extends ConsumerState<HomeShell> {
   int _index = 0;
+  bool _localizedStringsSet = false;
 
   // Titles are localized at build time using AppLocalizations
 
@@ -63,7 +65,7 @@ class _HomeShellState extends ConsumerState<HomeShell> {
               );
             },
             icon: const Icon(Icons.search),
-            tooltip: 'Search',
+            tooltip: loc.searchTooltip,
           ),
           IconButton(
             onPressed: () {
@@ -81,7 +83,7 @@ class _HomeShellState extends ConsumerState<HomeShell> {
               ));
             },
             icon: const Icon(Icons.info_outline),
-            tooltip: 'About',
+            tooltip: loc.aboutTooltip,
           ),
         ],
       ),
@@ -105,6 +107,27 @@ class _HomeShellState extends ConsumerState<HomeShell> {
         ],
       ),
     );
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if (!_localizedStringsSet) {
+      _localizedStringsSet = true;
+      final loc = AppLocalizations.of(context)!;
+      final notif = ref.read(notificationServiceProvider);
+      // fire-and-forget: update service with localized channel titles and templates
+      notif.setLocalizedStrings(
+        channelName: loc.notificationChannelDueName,
+        channelDescription: loc.notificationChannelDueDescription,
+        // the generated API exposes a formatting method for messages with
+        // placeholders. Call it with a literal placeholder so we get the
+        // template string (e.g. 'Due: {title}').
+        notificationTitleTemplate: loc.notificationDueTitle('{title}'),
+        notificationBody: loc.notificationDueBody,
+        linuxDefaultActionName: loc.linuxNotificationActionOpen,
+      );
+    }
   }
 
   Future<void> _showQuickCapture(BuildContext context) async {

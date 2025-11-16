@@ -216,6 +216,26 @@ class AppLocalizationsDe extends AppLocalizations {
   String get notifyOnDueTitle => 'Benachrichtigung bei Fälligkeit';
 
   @override
+  String get notificationChannelDueName => 'Fälligkeiten';
+
+  @override
+  String get notificationChannelDueDescription => 'Benachrichtigungen für anstehende Aufgaben';
+
+  @override
+  String notificationDueTitle(Object title) {
+    return 'Fällig: $title';
+  }
+
+  @override
+  String get notificationDueBody => 'Bleib dran – du hast es gleich geschafft!';
+
+  @override
+  String get linuxNotificationActionOpen => 'Öffnen';
+
+  @override
+  String get actionsStatusTitle => 'Status';
+
+  @override
   String get useFabToCapture => 'Nutze den FAB, um neue Gedanken einzufangen.';
 
   @override
@@ -340,4 +360,69 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get importLabel => 'Importieren';
+
+  @override
+  String get aboutDescription => 'Eine kleine GTD‑App für Studierende.\n\nDieses Projekt ist Open Source.';
+
+  @override
+  String get aboutRepositoryTitle => 'Repository';
+
+  @override
+  String get aboutGithub => 'GitHub';
+
+  @override
+  String get aboutSupportTitle => 'Unterstütze das Projekt';
+
+  @override
+  String get aboutBuyMeCoffee => 'Buy Me a Coffee';
+
+  @override
+  String get aboutBuyMeCoffeeSubtitle => 'Unterstütze die Entwicklung via Buy Me a Coffee';
+
+  @override
+  String get searchTooltip => 'Suchen';
+
+  @override
+  String get aboutTooltip => 'Über';
+
+  @override
+  String get more => 'Mehr';
+
+  @override
+  String get themeSystem => 'System';
+
+  @override
+  String get themeLight => 'Hell';
+
+  @override
+  String get themeDark => 'Dunkel';
+
+  @override
+  String get minutesHint => 'Minuten';
+
+  @override
+  String get localeSystemLabel => 'System (Standard)';
+
+  @override
+  String get localeDeLabel => 'Deutsch (de_DE)';
+
+  @override
+  String get localeEnGbLabel => 'English (UK) en_GB';
+
+  @override
+  String get localeEnUsLabel => 'English (US) en_US';
+
+  @override
+  String get localeFrLabel => 'Français (fr_FR)';
+
+  @override
+  String overflowCount(Object count) {
+    return '+$count';
+  }
+
+  @override
+  String get aboutLicenseTitle => 'Lizenz';
+
+  @override
+  String get aboutLicenseText => 'Dieses Projekt wird unter der MIT‑Lizenz verteilt. Siehe die LICENSE‑Datei für Details.';
 }

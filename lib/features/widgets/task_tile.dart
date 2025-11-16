@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:gtd_student/l10n/app_localizations.dart';
 
 import '../../core/extensions/date_extensions.dart';
-import '../../core/providers.dart';
+import 'package:gtd_student/core/providers.dart';
 import '../../data/models/task.dart';
 import '../../data/models/task_status.dart';
 import '../tasks/edit_task_page.dart';
@@ -98,7 +98,7 @@ class TaskTile extends ConsumerWidget {
                             padding: const EdgeInsets.only(right: 8),
                             child: Row(
                               children: [
-                                Tooltip(message: AppLocalizations.of(context)!.reviewLog, child: Chip(label: Text('+$overflowCount'))),
+                                Tooltip(message: AppLocalizations.of(context)!.reviewLog, child: Chip(label: Text(AppLocalizations.of(context)!.overflowCount(overflowCount)))),
                                 const SizedBox(width: 6),
                                 GestureDetector(
                                   onTap: () async {
@@ -270,7 +270,7 @@ class TaskTile extends ConsumerWidget {
                                   },
                                   child: Tooltip(
                                       message: AppLocalizations.of(context)!.showDetails,
-                                    child: const Icon(Icons.expand_more, size: 18, semanticLabel: 'Show details'),
+                                    child: Icon(Icons.expand_more, size: 18, semanticLabel: AppLocalizations.of(context)!.showDetails),
                                   ),
                                 ),
                               ],
@@ -286,7 +286,7 @@ class TaskTile extends ConsumerWidget {
         ),
         trailing: PopupMenuButton<TaskStatus>(
           icon: const Icon(Icons.more_vert),
-          tooltip: 'More',
+          tooltip: AppLocalizations.of(context)!.more,
           onSelected: (status) => ref.read(taskServiceProvider).updateStatus(task.id, status),
           itemBuilder: (context) => TaskStatus.values
               .map(

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:gtd_student/l10n/app_localizations.dart';
 
-import '../../core/extensions/date_extensions.dart';
-import '../../core/providers.dart';
+import 'package:gtd_student/core/extensions/date_extensions.dart';
+import 'package:gtd_student/core/providers.dart';
 import '../../data/models/project.dart';
 import '../../data/models/task.dart';
 import '../widgets/task_tile.dart';

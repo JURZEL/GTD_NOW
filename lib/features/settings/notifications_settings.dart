@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:gtd_student/l10n/app_localizations.dart';
 
-import '../../core/providers.dart';
+import 'package:gtd_student/core/providers.dart';
 // hive_boxes not needed directly here
 // widgets import not necessary; material.dart already included by consumers
 
@@ -11,18 +11,20 @@ class NotificationsSettingsPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final notificationService = ref.watch(notificationServiceProvider);
+  final notificationService = ref.watch(notificationServiceProvider);
     final hasPermissions = notificationService.hasPermissions;
     final notificationsEnabled = ref.watch(notificationsEnabledProvider);
 
     final fallback = notificationService.getFallbackScheduled();
     final appLocale = ref.watch(appLocaleProvider);
+  final loc = AppLocalizations.of(context)!;
 
-    const localeOptions = <String?, String>{
-      null: 'System (Standard)',
-      'de_DE': 'Deutsch (de_DE)',
-      'en_GB': 'English (UK) en_GB',
-      'en_US': 'English (US) en_US',
+    final localeOptions = <String?, String>{
+      null: loc.localeSystemLabel,
+      'de_DE': loc.localeDeLabel,
+      'en_GB': loc.localeEnGbLabel,
+      'en_US': loc.localeEnUsLabel,
+      'fr_FR': loc.localeFrLabel,
     };
 
     return Scaffold(
@@ -97,12 +99,12 @@ class NotificationsSettingsPage extends ConsumerWidget {
             Builder(builder: (context) {
               final mode = ref.watch(appThemeModeProvider);
               final String current = mode == ThemeMode.light ? 'light' : mode == ThemeMode.dark ? 'dark' : 'system';
-              return DropdownButton<String>(
+                return DropdownButton<String>(
                 value: current,
-                items: const [
-                  DropdownMenuItem(value: 'system', child: Text('System')),
-                  DropdownMenuItem(value: 'light', child: Text('Light')),
-                  DropdownMenuItem(value: 'dark', child: Text('Dark')),
+                items: [
+                  DropdownMenuItem(value: 'system', child: Text(loc.themeSystem)),
+                  DropdownMenuItem(value: 'light', child: Text(loc.themeLight)),
+                  DropdownMenuItem(value: 'dark', child: Text(loc.themeDark)),
                 ],
                 onChanged: (val) async {
                   if (val == null) return;
@@ -137,7 +139,7 @@ class NotificationsSettingsPage extends ConsumerWidget {
                                 children: [
                                   const Icon(Icons.light_mode, size: 20),
                                   const SizedBox(height: 8),
-                                  Text('Light', style: Theme.of(context).textTheme.bodyMedium),
+                                  Text(loc.themeLight, style: Theme.of(context).textTheme.bodyMedium),
                                 ],
                               ),
                             ),
@@ -159,7 +161,7 @@ class NotificationsSettingsPage extends ConsumerWidget {
                                 children: [
                                   const Icon(Icons.dark_mode, size: 20),
                                   const SizedBox(height: 8),
-                                  Text('Dark', style: Theme.of(context).textTheme.bodyMedium),
+                                  Text(loc.themeDark, style: Theme.of(context).textTheme.bodyMedium),
                                 ],
                               ),
                             ),
@@ -191,7 +193,7 @@ class NotificationsSettingsPage extends ConsumerWidget {
                                 context: context,
                                 builder: (dCtx) => AlertDialog(
                                   title: Text(AppLocalizations.of(dCtx)!.snooze),
-                                  content: TextField(controller: controller, keyboardType: TextInputType.number, decoration: const InputDecoration(hintText: 'Minutes')),
+                                  content: TextField(controller: controller, keyboardType: TextInputType.number, decoration: InputDecoration(hintText: loc.minutesHint)),
                                   actions: [
                                     TextButton(onPressed: () => Navigator.of(dCtx).pop(null), child: Text(AppLocalizations.of(dCtx)!.cancel)),
                                     FilledButton(onPressed: () => Navigator.of(dCtx).pop(int.tryParse(controller.text)), child: Text(AppLocalizations.of(dCtx)!.save)),

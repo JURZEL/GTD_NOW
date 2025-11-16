@@ -1,6 +1,8 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:intl/intl.dart' as intl;
+import 'package:intl/date_symbol_data_local.dart';
 
 import '../data/local/hive_boxes.dart';
 
@@ -67,7 +69,20 @@ class AppLocaleNotifier extends StateNotifier<String?> {
   final ISettingsRepository _repo;
 
   Future<void> setLocale(String? localeTag) async {
+    // Persist and update Intl locale and date formatting.
     await _repo.setAppLocale(localeTag);
+    try {
+      if (localeTag != null) {
+        await initializeDateFormatting(localeTag);
+        intl.Intl.defaultLocale = localeTag;
+      } else {
+        // Fall back to system/default formatting
+        await initializeDateFormatting();
+        intl.Intl.defaultLocale = null;
+      }
+    } catch (_) {
+      // ignore formatting initialization errors - app can still run
+    }
     state = _repo.appLocale();
   }
 }

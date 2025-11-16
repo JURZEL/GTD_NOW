@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../core/constants/time_window.dart';
-import '../../core/providers.dart';
+import 'package:gtd_student/core/providers.dart';
 import '../../core/extensions/date_extensions.dart';
 import 'package:gtd_student/l10n/app_localizations.dart';
 import '../../data/models/task.dart';
@@ -313,7 +313,7 @@ class _StatusTabs extends ConsumerWidget {
                           Padding(
                             padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
                             child: Text(
-                              'Status',
+                              AppLocalizations.of(context)!.actionsStatusTitle,
                               style: Theme.of(context).textTheme.titleMedium,
                             ),
                           ),

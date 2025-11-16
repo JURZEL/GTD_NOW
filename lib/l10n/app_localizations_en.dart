@@ -216,6 +216,26 @@ class AppLocalizationsEn extends AppLocalizations {
   String get notifyOnDueTitle => 'Notify on due';
 
   @override
+  String get notificationChannelDueName => 'Due dates';
+
+  @override
+  String get notificationChannelDueDescription => 'Notifications for upcoming tasks';
+
+  @override
+  String notificationDueTitle(Object title) {
+    return 'Due: $title';
+  }
+
+  @override
+  String get notificationDueBody => 'Keep going — you\'re almost done!';
+
+  @override
+  String get linuxNotificationActionOpen => 'Open';
+
+  @override
+  String get actionsStatusTitle => 'Status';
+
+  @override
   String get useFabToCapture => 'Use the FAB to capture thoughts.';
 
   @override
@@ -340,4 +360,69 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get importLabel => 'Import';
+
+  @override
+  String get aboutDescription => 'A small GTD app for students.\n\nThis project is open source.';
+
+  @override
+  String get aboutRepositoryTitle => 'Repository';
+
+  @override
+  String get aboutGithub => 'GitHub';
+
+  @override
+  String get aboutSupportTitle => 'Support the project';
+
+  @override
+  String get aboutBuyMeCoffee => 'Buy me a coffee';
+
+  @override
+  String get aboutBuyMeCoffeeSubtitle => 'Support development via Buy Me a Coffee';
+
+  @override
+  String get searchTooltip => 'Search';
+
+  @override
+  String get aboutTooltip => 'About';
+
+  @override
+  String get more => 'More';
+
+  @override
+  String get themeSystem => 'System';
+
+  @override
+  String get themeLight => 'Light';
+
+  @override
+  String get themeDark => 'Dark';
+
+  @override
+  String get minutesHint => 'Minutes';
+
+  @override
+  String get localeSystemLabel => 'System (Standard)';
+
+  @override
+  String get localeDeLabel => 'Deutsch (de_DE)';
+
+  @override
+  String get localeEnGbLabel => 'English (UK) en_GB';
+
+  @override
+  String get localeEnUsLabel => 'English (US) en_US';
+
+  @override
+  String get localeFrLabel => 'Français (fr_FR)';
+
+  @override
+  String overflowCount(Object count) {
+    return '+$count';
+  }
+
+  @override
+  String get aboutLicenseTitle => 'License';
+
+  @override
+  String get aboutLicenseText => 'This project is distributed under the MIT License. See the LICENSE file for details.';
 }

@@ -139,33 +139,52 @@ abstract class AppLocalizations {
   /// **'Notifications'**
   String get settingsTitle;
 
-  /// No description provided for @appearanceLabel.
+  /// Label for the appearance section in settings
   ///
   /// In en, this message translates to:
   /// **'Appearance'**
   String get appearanceLabel;
-  /// No description provided for @edit.
+
+  /// Label for edit action
   ///
   /// In en, this message translates to:
   /// **'Edit'**
   String get edit;
 
-  /// No description provided for @reschedule.
+  /// Label for reschedule action
+  ///
+  /// In en, this message translates to:
+  /// **'Reschedule'**
   String get reschedule;
 
-  /// No description provided for @markDone.
+  /// Label for marking a task done
+  ///
+  /// In en, this message translates to:
+  /// **'Mark done'**
   String get markDone;
 
-  /// No description provided for @markUndone.
+  /// Label for marking a task undone
+  ///
+  /// In en, this message translates to:
+  /// **'Mark undone'**
   String get markUndone;
 
-  /// No description provided for @snooze.
+  /// Label for snooze action
+  ///
+  /// In en, this message translates to:
+  /// **'Snooze'**
   String get snooze;
 
-  /// No description provided for @moveToProject.
+  /// Label for move to project action
+  ///
+  /// In en, this message translates to:
+  /// **'Move to project'**
   String get moveToProject;
 
-  /// No description provided for @showDetails.
+  /// Tooltip/label for showing details
+  ///
+  /// In en, this message translates to:
+  /// **'Show details'**
   String get showDetails;
 
   /// No description provided for @notificationsEnable.
@@ -444,6 +463,42 @@ abstract class AppLocalizations {
   /// **'Notify on due'**
   String get notifyOnDueTitle;
 
+  /// No description provided for @notificationChannelDueName.
+  ///
+  /// In en, this message translates to:
+  /// **'Due dates'**
+  String get notificationChannelDueName;
+
+  /// No description provided for @notificationChannelDueDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Notifications for upcoming tasks'**
+  String get notificationChannelDueDescription;
+
+  /// No description provided for @notificationDueTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Due: {title}'**
+  String notificationDueTitle(Object title);
+
+  /// No description provided for @notificationDueBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Keep going — you\'re almost done!'**
+  String get notificationDueBody;
+
+  /// No description provided for @linuxNotificationActionOpen.
+  ///
+  /// In en, this message translates to:
+  /// **'Open'**
+  String get linuxNotificationActionOpen;
+
+  /// No description provided for @actionsStatusTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Status'**
+  String get actionsStatusTitle;
+
   /// No description provided for @useFabToCapture.
   ///
   /// In en, this message translates to:
@@ -492,7 +547,7 @@ abstract class AppLocalizations {
   /// **'{minutes} min'**
   String minutesLabel(Object minutes);
 
-  /// No description provided for @hoursLabel.
+  /// Label for hours, e.g. '1 h'
   ///
   /// In en, this message translates to:
   /// **'{hours} h'**
@@ -683,6 +738,132 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Import'**
   String get importLabel;
+
+  /// No description provided for @aboutDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'A small GTD app for students.\n\nThis project is open source.'**
+  String get aboutDescription;
+
+  /// No description provided for @aboutRepositoryTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Repository'**
+  String get aboutRepositoryTitle;
+
+  /// No description provided for @aboutGithub.
+  ///
+  /// In en, this message translates to:
+  /// **'GitHub'**
+  String get aboutGithub;
+
+  /// No description provided for @aboutSupportTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Support the project'**
+  String get aboutSupportTitle;
+
+  /// No description provided for @aboutBuyMeCoffee.
+  ///
+  /// In en, this message translates to:
+  /// **'Buy me a coffee'**
+  String get aboutBuyMeCoffee;
+
+  /// No description provided for @aboutBuyMeCoffeeSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Support development via Buy Me a Coffee'**
+  String get aboutBuyMeCoffeeSubtitle;
+
+  /// No description provided for @searchTooltip.
+  ///
+  /// In en, this message translates to:
+  /// **'Search'**
+  String get searchTooltip;
+
+  /// No description provided for @aboutTooltip.
+  ///
+  /// In en, this message translates to:
+  /// **'About'**
+  String get aboutTooltip;
+
+  /// No description provided for @more.
+  ///
+  /// In en, this message translates to:
+  /// **'More'**
+  String get more;
+
+  /// No description provided for @themeSystem.
+  ///
+  /// In en, this message translates to:
+  /// **'System'**
+  String get themeSystem;
+
+  /// No description provided for @themeLight.
+  ///
+  /// In en, this message translates to:
+  /// **'Light'**
+  String get themeLight;
+
+  /// No description provided for @themeDark.
+  ///
+  /// In en, this message translates to:
+  /// **'Dark'**
+  String get themeDark;
+
+  /// No description provided for @minutesHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Minutes'**
+  String get minutesHint;
+
+  /// No description provided for @localeSystemLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'System (Standard)'**
+  String get localeSystemLabel;
+
+  /// No description provided for @localeDeLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Deutsch (de_DE)'**
+  String get localeDeLabel;
+
+  /// No description provided for @localeEnGbLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'English (UK) en_GB'**
+  String get localeEnGbLabel;
+
+  /// No description provided for @localeEnUsLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'English (US) en_US'**
+  String get localeEnUsLabel;
+
+  /// No description provided for @localeFrLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Français (fr_FR)'**
+  String get localeFrLabel;
+
+  /// No description provided for @overflowCount.
+  ///
+  /// In en, this message translates to:
+  /// **'+{count}'**
+  String overflowCount(Object count);
+
+  /// No description provided for @aboutLicenseTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'License'**
+  String get aboutLicenseTitle;
+
+  /// No description provided for @aboutLicenseText.
+  ///
+  /// In en, this message translates to:
+  /// **'This project is distributed under the MIT License. See the LICENSE file for details.'**
+  String get aboutLicenseText;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
