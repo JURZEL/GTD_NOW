@@ -1,0 +1,122 @@
+{
+  "@@locale": "fr",
+  "appTitle": "GTD Étudiant",
+  "quickCapture": "Saisie rapide",
+  "navInbox": "Boîte de réception",
+  "navProjects": "Projets",
+  "navActions": "Actions",
+  "navReview": "Revue",
+  "settingsTitle": "Notifications",
+  "appearanceLabel": "Apparence",
+  "@appearanceLabel": {
+    "description": "Libellé pour la section Apparence dans les paramètres"
+  },
+  "edit": "Modifier",
+  "@edit": { "description": "Libellé pour l'action Modifier" },
+  "reschedule": "Replanifier",
+  "@reschedule": { "description": "Libellé pour l'action Replanifier" },
+  "markDone": "Marquer comme fait",
+  "@markDone": { "description": "Libellé pour marquer comme fait" },
+  "markUndone": "Annuler comme fait",
+  "@markUndone": { "description": "Libellé pour annuler le statut fait" },
+  "snooze": "Snooze",
+  "@snooze": { "description": "Libellé pour l'action de snooze" },
+  "moveToProject": "Déplacer vers un projet",
+  "@moveToProject": { "description": "Libellé pour déplacer vers un projet" },
+  "showDetails": "Afficher les détails",
+  "@showDetails": { "description": "Tooltip/label pour afficher les détails" },
+  "notificationsEnable": "Activer les notifications",
+  "permissionsStatus": "Autorisations : {status}",
+  "requestPermissions": "Demander les autorisations",
+  "openSettings": "Ouvrir les paramètres",
+  "fallbackReminders": "Rappels de secours (Windows/Fuchsia) :",
+  "noFallbacks": "Aucun rappel de secours",
+  "clearAll": "Tout effacer",
+    "appLanguage": "Langue de l'application",
+    "appLanguageSet": "Langue de l'application définie : {locale}",
+    "initializationFailed": "Échec de l'initialisation : {error}",
+    "searchTasks": "Tâches",
+    "searchNoResults": "Aucun résultat",
+    "deadlineLabel": "Date limite {date}",
+    "dueLabel": "À faire {date}"
+    ,"createProject": "Créer un projet"
+    ,"noProjectsYet": "Aucun projet pour l'instant — créez le premier !"
+    ,"errorWith": "Erreur : {error}"
+    ,"openTasksCount": "Tâches ouvertes ({count})"
+    ,"noOpenTasks": "Aucune tâche ouverte — super !"
+    ,"dialogCreateProjectTitle": "Créer un projet"
+    ,"nameLabel": "Nom"
+    ,"descriptionLabel": "Description"
+   ,"delete": "Supprimer"
+   ,"confirmDeleteTitle": "Confirmer la suppression"
+   ,"confirmDeleteProject": "Supprimer le projet \"{name}\" ?"
+   ,"projectDeleted": "Projet \"{name}\" supprimé"
+   ,"chooseDate": "Choisir une date"
+    ,"chooseDate": "Choisir une date"
+    ,"cancel": "Annuler"
+    ,"saving": "Enregistrement..."
+    ,"save": "Enregistrer"
+    ,"weeklyReviewTitle": "Revue hebdomadaire"
+    ,"weeklyReviewDescription": "Dégagez votre esprit, passez en revue tous les projets et planifiez la semaine suivante."
+    ,"startReview": "Commencer la revue"
+    ,"inboxHeader": "Boîte de réception ({count})"
+    ,"inboxSubtitle": "Videz la boîte de réception régulièrement pour ne rien perdre."
+    ,"emptyInbox": "Vider la boîte"
+    ,"maybeLaterHeader": "Peut-être/Plus tard ({count})"
+    ,"reviewLog": "Journal de revue"
+    ,"reviewNotesTitle": "Notes de revue"
+    ,"backupLabel": "Sauvegarde"
+    ,"capturedAtLabel": "Enregistré : {date}"
+    ,"taskLabel": "Tâche"
+    ,"somedayLabel": "Peut-être/Plus tard"
+     ,"exportLabel": "Exporter"
+     ,"@exportLabel": {
+       "description": "Étiquette pour le bouton d'exportation dans la section de sauvegarde"
+     }
+     ,"importLabel": "Importer"
+     ,"@importLabel": {
+       "description": "Étiquette pour le bouton d'importation dans la section de sauvegarde"
+     }
+    ,"twoMinuteRuleTitle": "Règle des 2 minutes : faites-le maintenant"
+    ,"twoMinuteRuleSubtitle": "Si cela prend moins de temps, marquez-le comme terminé immédiatement."
+    ,"notifyOnDueTitle": "Notifier à l'échéance"
+    ,"useFabToCapture": "Utilisez le FAB pour capturer des idées."
+    ,"nextActionsTitle": "Actions suivantes"
+    ,"noActionsMessage": "Aucune tâche pour la sélection actuelle. Ajustez les filtres."
+    ,"calendarTitle": "Calendrier"
+    ,"filterByContext": "Filtrer par contexte"
+    ,"energyLevel": "Niveau d'énergie"
+    ,"timeWindow": "Fenêtre temporelle"
+    ,"minutesLabel": "{minutes} min"
+    ,"hoursLabel": "{hours} h"
+    ,"@hoursLabel": { "description": "Label for hours, e.g. '1 h'" }
+    ,"permissionGranted": "Accordé"
+    ,"permissionDenied": "Non accordé"
+    ,"processTitle": "Traiter"
+    ,"titleLabel": "Titre"
+    ,"descriptionOptional": "Description (optionnelle)"
+    ,"contextLabel": "Contexte"
+    ,"noProject": "Aucun projet"
+    ,"projectsLoadError": "Impossible de charger les projets"
+    ,"projectLabel": "Projet"
+    ,"listLabel": "Liste"
+    ,"energyLabel": "Énergie"
+    ,"dueByLabel": "À faire avant"
+    ,"timeNeededLabel": "Temps nécessaire"
+    ,"applyLabel": "Appliquer"
+    ,"exportRunning": "Export en cours..."
+    ,"importRunning": "Import en cours..."
+    ,"exportSavedMessage": "Export enregistré dans {path}"
+    ,"importCompleteMessage": "Import terminé"
+    ,"reviewNotesHint": "Qu'est-ce qui a bien fonctionné ? Qu'est-ce qui nécessite de l'attention ?"
+    ,"statNextActions": "Actions suivantes"
+    ,"statWaitingFor": "En attente"
+    ,"statMaybe": "Peut-être"
+    ,"statDone": "Terminé"
+    ,"twoMinuteChip": "Règle des 2 min"
+    ,"quickCapturePrompt": "Qu'est-ce qui vous préoccupe ?"
+    ,"quickCaptureHint": "Saisir rapidement et traiter plus tard"
+    ,"addToInbox": "Ajouter à la boîte"
+    ,"inboxHeroTitle": "Garez vos pensées"
+    ,"inboxHeroDescription": "Capturez tout ce que vous rencontrez. Traitez-le plus tard et restez concentré."
+}

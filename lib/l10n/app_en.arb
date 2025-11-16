@@ -1,0 +1,122 @@
+{
+  "@@locale": "en",
+  "appTitle": "GTD Student",
+  "quickCapture": "Quick capture",
+  "navInbox": "Inbox",
+  "navProjects": "Projects",
+  "navActions": "Actions",
+  "navReview": "Review",
+  "settingsTitle": "Notifications",
+  "appearanceLabel": "Appearance",
+  "@appearanceLabel": {
+    "description": "Label for the appearance section in settings"
+  },
+  "edit": "Edit",
+  "@edit": { "description": "Label for edit action" },
+  "reschedule": "Reschedule",
+  "@reschedule": { "description": "Label for reschedule action" },
+  "markDone": "Mark done",
+  "@markDone": { "description": "Label for marking a task done" },
+  "markUndone": "Mark undone",
+  "@markUndone": { "description": "Label for marking a task undone" },
+  "snooze": "Snooze",
+  "@snooze": { "description": "Label for snooze action" },
+  "moveToProject": "Move to project",
+  "@moveToProject": { "description": "Label for move to project action" },
+  "showDetails": "Show details",
+  "@showDetails": { "description": "Tooltip/label for showing details" },
+  "notificationsEnable": "Enable notifications",
+  "permissionsStatus": "Permissions: {status}",
+  "requestPermissions": "Request permissions",
+  "openSettings": "Open settings",
+  "fallbackReminders": "Fallback reminders (Windows/Fuchsia):",
+  "noFallbacks": "No fallback reminders",
+  "clearAll": "Clear all",
+  "appLanguage": "App language",
+  "appLanguageSet": "App language set: {locale}"
+
+  ,"initializationFailed": "Initialization failed: {error}"
+  ,"searchTasks": "Tasks"
+  ,"searchNoResults": "No results"
+  ,"deadlineLabel": "Deadline {date}"
+  ,"dueLabel": "Due {date}"
+  ,"createProject": "Create project"
+  ,"noProjectsYet": "No projects yet — create the first one!"
+  ,"errorWith": "Error: {error}"
+  ,"openTasksCount": "Open tasks ({count})"
+  ,"noOpenTasks": "No open tasks — nice!"
+  ,"dialogCreateProjectTitle": "Create project"
+  ,"nameLabel": "Name"
+  ,"descriptionLabel": "Description"
+   ,"delete": "Delete"
+   ,"confirmDeleteTitle": "Confirm delete"
+   ,"confirmDeleteProject": "Delete project \"{name}\"?"
+   ,"projectDeleted": "Project \"{name}\" deleted"
+  ,"chooseDate": "Choose date"
+  ,"cancel": "Cancel"
+  ,"saving": "Saving..."
+  ,"save": "Save"
+  ,"weeklyReviewTitle": "Weekly review"
+  ,"weeklyReviewDescription": "Clear your mind, review all projects and plan the next week."
+  ,"startReview": "Start review"
+  ,"inboxHeader": "Inbox ({count})"
+  ,"inboxSubtitle": "Empty the inbox regularly so nothing is lost."
+  ,"emptyInbox": "Empty inbox"
+  ,"maybeLaterHeader": "Maybe/Later ({count})"
+  ,"reviewLog": "Review Log"
+  ,"reviewNotesTitle": "Review Notes"
+  ,"backupLabel": "Backup"
+  ,"capturedAtLabel": "Captured: {date}"
+  ,"taskLabel": "Task"
+  ,"somedayLabel": "Maybe/Later"
+  ,"twoMinuteRuleTitle": "2-minute rule: do it now"
+  ,"twoMinuteRuleSubtitle": "If it takes less time, mark it done immediately."
+  ,"notifyOnDueTitle": "Notify on due"
+  ,"useFabToCapture": "Use the FAB to capture thoughts."
+  ,"nextActionsTitle": "Next actions"
+  ,"noActionsMessage": "No tasks for current selection. Adjust filters."
+  ,"calendarTitle": "Calendar"
+  ,"filterByContext": "Filter by context"
+  ,"energyLevel": "Energy level"
+  ,"timeWindow": "Time window"
+  ,"minutesLabel": "{minutes} min"
+  ,"hoursLabel": "{hours} h"
+  ,"@hoursLabel": { "description": "Label for hours, e.g. '1 h'" }
+  ,"permissionGranted": "Granted"
+  ,"permissionDenied": "Not granted"
+  ,"processTitle": "Process"
+  ,"titleLabel": "Title"
+  ,"descriptionOptional": "Description (optional)"
+  ,"contextLabel": "Context"
+  ,"noProject": "No project"
+  ,"projectsLoadError": "Could not load projects"
+  ,"projectLabel": "Project"
+  ,"listLabel": "List"
+  ,"energyLabel": "Energy"
+  ,"dueByLabel": "Due by"
+  ,"timeNeededLabel": "Time needed"
+  ,"applyLabel": "Apply"
+  ,"exportRunning": "Exporting..."
+  ,"importRunning": "Importing..."
+  ,"exportSavedMessage": "Export saved to {path}"
+  ,"importCompleteMessage": "Import completed"
+  ,"reviewNotesHint": "What went well? What needs attention?"
+  ,"statNextActions": "Next actions"
+  ,"statWaitingFor": "Waiting for"
+  ,"statMaybe": "Maybe"
+  ,"statDone": "Done"
+  ,"twoMinuteChip": "2-min rule"
+  ,"quickCapturePrompt": "What's on your mind?"
+  ,"quickCaptureHint": "Capture quickly and process later"
+  ,"addToInbox": "Add to inbox"
+  ,"inboxHeroTitle": "Park your thoughts"
+  ,"inboxHeroDescription": "Capture everything you encounter. Process it later and stay in flow."
+  ,"exportLabel": "Export"
+  ,"@exportLabel": {
+    "description": "Label for the export button in the backup section"
+  }
+  ,"importLabel": "Import"
+  ,"@importLabel": {
+    "description": "Label for the import button in the backup section"
+  }
+}

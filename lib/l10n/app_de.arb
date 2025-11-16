@@ -1,0 +1,123 @@
+{
+  "@@locale": "de",
+  "appTitle": "GTD Student",
+  "quickCapture": "Schnelleingabe",
+  "navInbox": "Inbox",
+  "navProjects": "Projekte",
+  "navActions": "Aktionen",
+  "navReview": "Review",
+  "settingsTitle": "Benachrichtigungen",
+  "appearanceLabel": "Darstellung",
+  "@appearanceLabel": {
+    "description": "Beschriftung für den Darstellung-Bereich in den Einstellungen"
+  },
+  "edit": "Bearbeiten",
+  "@edit": { "description": "Beschriftung für Aktion Bearbeiten" },
+  "reschedule": "Neu terminieren",
+  "@reschedule": { "description": "Beschriftung für Aktion Neu terminieren" },
+  "markDone": "Als erledigt markieren",
+  "@markDone": { "description": "Beschriftung zum Markieren als erledigt" },
+  "markUndone": "Als unerledigt markieren",
+  "@markUndone": { "description": "Beschriftung zum Rückgängig machen" },
+  "snooze": "Schlummern",
+  "@snooze": { "description": "Beschriftung für Schlummern-Aktion" },
+  "moveToProject": "Verschieben zu Projekt",
+  "@moveToProject": { "description": "Beschriftung für Verschieben zu Projekt" },
+  "showDetails": "Details anzeigen",
+  "@showDetails": { "description": "Tooltip/Beschriftung für Details anzeigen" },
+  "notificationsEnable": "Benachrichtigungen aktivieren",
+  "permissionsStatus": "Berechtigungen: {status}",
+  "requestPermissions": "Berechtigung anfragen",
+  "openSettings": "Einstellungen öffnen",
+  "fallbackReminders": "Fallback-Erinnerungen (nur Windows/Fuchsia):",
+  "noFallbacks": "Keine Fallback-Erinnerungen vorhanden",
+  "clearAll": "Alle löschen",
+  "appLanguage": "App-Sprache",
+  "appLanguageSet": "App-Sprache gesetzt: {locale}"
+
+  ,"initializationFailed": "Initialisierung fehlgeschlagen: {error}"
+  ,"searchTasks": "Aufgaben"
+  ,"searchNoResults": "Keine Treffer"
+  ,"deadlineLabel": "Deadline {date}"
+  ,"dueLabel": "Fällig {date}"
+  ,"createProject": "Projekt anlegen"
+  ,"noProjectsYet": "Noch keine Projekte. Lege gleich die ersten an!"
+  ,"errorWith": "Fehler: {error}"
+  ,"openTasksCount": "Offene Tasks ({count})"
+  ,"noOpenTasks": "Keine offenen Aufgaben – stark!"
+  ,"dialogCreateProjectTitle": "Projekt anlegen"
+  ,"nameLabel": "Name"
+  ,"descriptionLabel": "Beschreibung"
+ ,"delete": "Löschen"
+ ,"confirmDeleteTitle": "Löschen bestätigen"
+ ,"confirmDeleteProject": "Projekt \"{name}\" löschen?"
+ ,"projectDeleted": "Projekt \"{name}\" gelöscht"
+ ,"nameLabel": "Name"
+  ,"chooseDate": "Datum wählen"
+  ,"cancel": "Abbrechen"
+  ,"saving": "Speichert..."
+  ,"save": "Speichern"
+  ,"weeklyReviewTitle": "Wöchentliche Review"
+  ,"weeklyReviewDescription": "Räume deinen Kopf auf, sieh alle Projekte durch und plane die nächste Woche."
+  ,"startReview": "Review starten"
+  ,"inboxHeader": "Inbox ({count})"
+  ,"inboxSubtitle": "Leere die Inbox regelmäßig, damit nichts verloren geht."
+  ,"emptyInbox": "Inbox leeren"
+  ,"maybeLaterHeader": "Vielleicht/Später ({count})"
+  ,"reviewLog": "Review Log"
+  ,"reviewNotesTitle": "Review Notizen"
+  ,"backupLabel": "Backup"
+  ,"capturedAtLabel": "Erfasst: {date}"
+    ,"exportLabel": "Exportieren"
+    ,"@exportLabel": {
+      "description": "Label für den Export-Button im Backup-Bereich"
+    }
+    ,"importLabel": "Importieren"
+    ,"@importLabel": {
+      "description": "Label für den Import-Button im Backup-Bereich"
+    }
+  ,"taskLabel": "Aufgabe"
+  ,"somedayLabel": "Vielleicht/Später"
+  ,"twoMinuteRuleTitle": "2-Minuten-Regel: sofort erledigen"
+  ,"twoMinuteRuleSubtitle": "Wenn es schneller geht, hake es direkt ab."
+  ,"notifyOnDueTitle": "Benachrichtigung bei Fälligkeit"
+  ,"useFabToCapture": "Nutze den FAB, um neue Gedanken einzufangen."
+  ,"nextActionsTitle": "Nächste Schritte"
+  ,"noActionsMessage": "Keine Aufgaben für die aktuelle Auswahl. Passe die Filter an."
+  ,"calendarTitle": "Kalender"
+  ,"filterByContext": "Filter nach Kontext"
+  ,"energyLevel": "Energielevel"
+  ,"timeWindow": "Zeitfenster"
+  ,"minutesLabel": "{minutes} Min"
+  ,"hoursLabel": "{hours} h"
+  ,"@hoursLabel": { "description": "Label for hours, e.g. '1 h'" }
+  ,"permissionGranted": "Erteilt"
+  ,"permissionDenied": "Nicht erteilt"
+  ,"processTitle": "Verarbeiten"
+  ,"titleLabel": "Titel"
+  ,"descriptionOptional": "Beschreibung (optional)"
+  ,"contextLabel": "Kontext"
+  ,"noProject": "Kein Projekt"
+  ,"projectsLoadError": "Projekte konnten nicht geladen werden"
+  ,"projectLabel": "Projekt"
+  ,"listLabel": "Liste"
+  ,"energyLabel": "Energie"
+  ,"dueByLabel": "Fällig bis"
+  ,"timeNeededLabel": "Zeitbedarf"
+  ,"applyLabel": "Übernehmen"
+  ,"exportRunning": "Export läuft..."
+  ,"importRunning": "Import läuft..."
+  ,"exportSavedMessage": "Export gespeichert unter {path}"
+  ,"importCompleteMessage": "Import abgeschlossen"
+  ,"reviewNotesHint": "Was lief gut? Was braucht Aufmerksamkeit?"
+  ,"statNextActions": "Nächste Aktionen"
+  ,"statWaitingFor": "Warten auf"
+  ,"statMaybe": "Vielleicht"
+  ,"statDone": "Erledigt"
+  ,"twoMinuteChip": "2-Min-Regel"
+  ,"quickCapturePrompt": "Was geht dir durch den Kopf?"
+  ,"quickCaptureHint": "Schnell festhalten und später verarbeiten"
+  ,"addToInbox": "In Inbox legen"
+  ,"inboxHeroTitle": "Gedanken parken"
+  ,"inboxHeroDescription": "Fange alles ein, was dir begegnet. Verarbeite es später in Ruhe und bleibe im Flow."
+}
