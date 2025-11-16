@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="600" height="300">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" width="300" height="200">
   <!--
     Even more accurate Union Jack approximation.
     - The flag proportion is 1:2 (height to width). viewBox 0 0 60 30 maps to that ratio.
@@ -10,24 +10,26 @@
   <rect width="60" height="30" fill="#012169" />
 
   <!-- White diagonal saltire (approx with polygons) -->
-  <polygon fill="#ffffff" points="0,0 6,0 60,24 60,30 54,30 0,6" />
-  <polygon fill="#ffffff" points="0,30 6,30 60,6 60,0 54,0 0,24" />
+    <rect width="3" height="2" fill="#012169" />
 
-  <!-- Narrow red diagonals (overlay inside the white bands) -->
-  <polygon fill="#C8102E" points="0,0 3,0 60,21 60,18 57,18 0,0" opacity="1" />
-  <polygon fill="#C8102E" points="0,30 3,30 60,9 60,12 57,12 0,30" opacity="1" />
+    <!-- Align to other flags by adding identical inner padding/padding scale -->
+    <g transform="translate(0.15,0.12) scale(0.82)">
 
-  <!-- Central white cross (fimbriation) -->
-  <rect x="22" y="0" width="16" height="30" fill="#ffffff" />
-  <rect x="0" y="11" width="60" height="8" fill="#ffffff" />
+      <!-- White diagonal saltires (thick white bands) -->
+      <line x1="0" y1="0" x2="3" y2="2" stroke="#ffffff" stroke-width="0.35" stroke-linecap="butt" />
+      <line x1="0" y1="2" x2="3" y2="0" stroke="#ffffff" stroke-width="0.35" stroke-linecap="butt" />
 
-  <!-- Central red cross with correct narrower widths -->
-  <rect x="23.5" y="0" width="13" height="30" fill="#C8102E" />
-  <rect x="0" y="12.4" width="60" height="5.2" fill="#C8102E" />
+      <!-- Thin red diagonals inside white saltire -->
+      <line x1="0" y1="0" x2="3" y2="2" stroke="#C8102E" stroke-width="0.2" stroke-linecap="butt" />
+      <line x1="0" y1="2" x2="3" y2="0" stroke="#C8102E" stroke-width="0.2" stroke-linecap="butt" />
 
-  <!-- Fine fimbriations near corners and adding accents for diagonal offsets -->
-  <polygon fill="#ffffff" points="0,0 10,0 60,20 60,17 50,17 0,0" opacity="0.97" />
-  <polygon fill="#ffffff" points="0,30 10,30 60,10 60,13 50,13 0,30" opacity="0.97" />
-  <polygon fill="#C8102E" points="0,0 6,0 60,18 60,17 54,17 0,0" opacity="0.95" />
-  <polygon fill="#C8102E" points="0,30 6,30 60,12 60,13 54,13 0,30" opacity="0.95" />
+      <!-- Central white fimbriation -->
+      <rect x="1.02" y="0" width="0.96" height="2" fill="#ffffff" />
+      <rect x="0" y="0.9" width="3" height="0.2" fill="#ffffff" />
+
+      <!-- Central red cross -->
+      <rect x="1.2" y="0" width="0.6" height="2" fill="#C8102E" />
+      <rect x="0" y="0.95" width="3" height="0.1" fill="#C8102E" />
+
+    </g>
 </svg>
