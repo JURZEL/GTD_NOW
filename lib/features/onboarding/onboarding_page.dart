@@ -14,6 +14,7 @@ class OnboardingPage extends ConsumerStatefulWidget {
 class _OnboardingPageState extends ConsumerState<OnboardingPage> {
   final PageController _controller = PageController();
   int _page = 0;
+  bool _languagePickerShown = false;
 
   @override
   void dispose() {
@@ -115,6 +116,64 @@ class _OnboardingPageState extends ConsumerState<OnboardingPage> {
         ],
       ),
     );
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    // Show language picker once before tutorial pages are shown.
+    if (!_languagePickerShown) {
+      _languagePickerShown = true;
+      WidgetsBinding.instance.addPostFrameCallback((_) => _showLanguagePicker());
+    }
+  }
+
+  Future<void> _showLanguagePicker() async {
+    final loc = AppLocalizations.of(context)!;
+    // Dialog with flag emoji and native language names. These labels are intentionally
+    // the native names (Deutsch, English, Français) as requested by the user.
+    final choice = await showDialog<String?>(
+      context: context,
+      barrierDismissible: true,
+      builder: (ctx) => AlertDialog(
+        title: Text(loc.onboardingTitle),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: const [
+            Text('Deutsch — Bitte wähle die App‑Sprache.'),
+            SizedBox(height: 6),
+            Text('English — Please choose the app language.'),
+            SizedBox(height: 6),
+            Text("Français — Veuillez choisir la langue de l'application."),
+          ],
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(ctx).pop(null),
+            child: Text(AppLocalizations.of(context)!.onboardingSkip),
+          ),
+          TextButton(
+            onPressed: () => Navigator.of(ctx).pop('de_DE'),
+            child: const Text('🇩🇪  Deutsch'),
+          ),
+          TextButton(
+            onPressed: () => Navigator.of(ctx).pop('en_GB'),
+            child: const Text('🇬🇧  English'),
+          ),
+          TextButton(
+            onPressed: () => Navigator.of(ctx).pop('fr_FR'),
+            child: const Text('🇫🇷  Français'),
+          ),
+        ],
+      ),
+    );
+
+    if (choice != null) {
+      await ref.read(appLocaleProvider.notifier).setLocale(choice);
+      // Rebuild so AppLocalizations updates; the tutorial will now pick up the new locale.
+      setState(() {});
+    }
   }
 
   // removed custom dots in favor of smooth_page_indicator
