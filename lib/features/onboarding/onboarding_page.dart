@@ -156,15 +156,15 @@ class _OnboardingPageState extends ConsumerState<OnboardingPage> {
           ),
           TextButton(
             onPressed: () => Navigator.of(ctx).pop('de_DE'),
-            child: Row(children: [SvgPicture.asset('assets/flags/de.svg', width: 24, height: 16), const SizedBox(width: 8), const Text('Deutsch')]),
+            child: Row(children: [SvgPicture.asset('assets/flags/de.svg', width: 36, height: 24), const SizedBox(width: 12), const Text('Deutsch', style: TextStyle(fontSize: 16))]),
           ),
           TextButton(
             onPressed: () => Navigator.of(ctx).pop('en_GB'),
-            child: Row(children: [SvgPicture.asset('assets/flags/en_gb.svg', width: 24, height: 16), const SizedBox(width: 8), const Text('English')]),
+            child: Row(children: [SvgPicture.asset('assets/flags/en_gb.svg', width: 36, height: 24), const SizedBox(width: 12), const Text('English', style: TextStyle(fontSize: 16))]),
           ),
           TextButton(
             onPressed: () => Navigator.of(ctx).pop('fr_FR'),
-            child: Row(children: [SvgPicture.asset('assets/flags/fr.svg', width: 24, height: 16), const SizedBox(width: 8), const Text('Français')]),
+            child: Row(children: [SvgPicture.asset('assets/flags/fr.svg', width: 36, height: 24), const SizedBox(width: 12), const Text('Français', style: TextStyle(fontSize: 16))]),
           ),
         ],
       ),

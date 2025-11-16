@@ -454,6 +454,27 @@ class AppLocalizationsDe extends AppLocalizations {
   String get onboardingSkip => 'Überspringen';
 
   @override
+  String get showOnboardingAgain => 'Tutorial erneut anzeigen';
+
+  @override
+  String get showOnboardingAgainTooltip => 'Tutorial zurücksetzen und erneut anzeigen';
+
+  @override
+  String get resetAppTitle => 'App zurücksetzen';
+
+  @override
+  String get resetAppDescription => 'Alle lokalen App‑Daten löschen (Tasks, Projekte, Inbox, Reviews) und alle Einstellungen zurücksetzen.';
+
+  @override
+  String get resetAppConfirm => 'Bist du sicher, dass du ALLE lokalen Daten unwiderruflich löschen möchtest?';
+
+  @override
+  String get resetAppButton => 'App zurücksetzen';
+
+  @override
+  String get resetAppDone => 'App zurückgesetzt';
+
+  @override
   String get onboardingStep1Extra => 'Tipp: Halte Erfassungen kurz — Titel + 1‑Zeile Notiz reichen meist aus.';
 
   @override

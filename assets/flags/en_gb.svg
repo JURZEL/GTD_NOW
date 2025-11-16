@@ -1,16 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 3" width="360" height="180">
-  <rect width="6" height="3" fill="#012169"/>
-  <rect x="2.55" width="0.9" height="3" fill="#fff"/>
-  <rect y="1.05" width="6" height="0.9" fill="#fff"/>
-  <rect x="2.7" width="0.6" height="3" fill="#C8102E"/>
-  <rect y="1.2" width="6" height="0.6" fill="#C8102E"/>
-  <!-- Simplified diagonal red cross approximation -->
-  <g fill="#fff">
-    <polygon points="0,0 0.6,0 6,2.4 6,1.8"/>
-    <polygon points="0,3 0.6,3 6,0.6 6,1.2"/>
-  </g>
-  <g fill="#C8102E">
-    <polygon points="0,0 0.3,0 6,2.1 6,1.8"/>
-    <polygon points="0,3 0.3,3 6,0.9 6,1.2"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="600" height="300">
+  <!--
+    Even more accurate Union Jack approximation.
+    - The flag proportion is 1:2 (height to width). viewBox 0 0 60 30 maps to that ratio.
+    - White diagonals (saltire) use polygons to preserve sharp joins.
+    - Narrow red diagonals are offset inside the white ones to mimic the fimbriation.
+    - Central white fimbriation with red cross overlays the white cross.
+    This approaches correct geometry to look good even at small sizes.
+  -->
+  <rect width="60" height="30" fill="#012169" />
+
+  <!-- White diagonal saltire (approx with polygons) -->
+  <polygon fill="#ffffff" points="0,0 6,0 60,24 60,30 54,30 0,6" />
+  <polygon fill="#ffffff" points="0,30 6,30 60,6 60,0 54,0 0,24" />
+
+  <!-- Narrow red diagonals (overlay inside the white bands) -->
+  <polygon fill="#C8102E" points="0,0 3,0 60,21 60,18 57,18 0,0" opacity="1" />
+  <polygon fill="#C8102E" points="0,30 3,30 60,9 60,12 57,12 0,30" opacity="1" />
+
+  <!-- Central white cross (fimbriation) -->
+  <rect x="22" y="0" width="16" height="30" fill="#ffffff" />
+  <rect x="0" y="11" width="60" height="8" fill="#ffffff" />
+
+  <!-- Central red cross with correct narrower widths -->
+  <rect x="23.5" y="0" width="13" height="30" fill="#C8102E" />
+  <rect x="0" y="12.4" width="60" height="5.2" fill="#C8102E" />
+
+  <!-- Fine fimbriations near corners and adding accents for diagonal offsets -->
+  <polygon fill="#ffffff" points="0,0 10,0 60,20 60,17 50,17 0,0" opacity="0.97" />
+  <polygon fill="#ffffff" points="0,30 10,30 60,10 60,13 50,13 0,30" opacity="0.97" />
+  <polygon fill="#C8102E" points="0,0 6,0 60,18 60,17 54,17 0,0" opacity="0.95" />
+  <polygon fill="#C8102E" points="0,30 6,30 60,12 60,13 54,13 0,30" opacity="0.95" />
 </svg>

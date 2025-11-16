@@ -919,6 +919,48 @@ abstract class AppLocalizations {
   /// **'Skip'**
   String get onboardingSkip;
 
+  /// No description provided for @showOnboardingAgain.
+  ///
+  /// In en, this message translates to:
+  /// **'Show the tutorial again'**
+  String get showOnboardingAgain;
+
+  /// No description provided for @showOnboardingAgainTooltip.
+  ///
+  /// In en, this message translates to:
+  /// **'Reset and show the onboarding tutorial'**
+  String get showOnboardingAgainTooltip;
+
+  /// No description provided for @resetAppTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Reset app'**
+  String get resetAppTitle;
+
+  /// No description provided for @resetAppDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete all local app data (tasks, projects, inbox, reviews) and reset all settings to defaults.'**
+  String get resetAppDescription;
+
+  /// No description provided for @resetAppConfirm.
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to permanently delete all local data? This cannot be undone.'**
+  String get resetAppConfirm;
+
+  /// No description provided for @resetAppButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Reset app'**
+  String get resetAppButton;
+
+  /// No description provided for @resetAppDone.
+  ///
+  /// In en, this message translates to:
+  /// **'App reset complete'**
+  String get resetAppDone;
+
   /// No description provided for @onboardingStep1Extra.
   ///
   /// In en, this message translates to:

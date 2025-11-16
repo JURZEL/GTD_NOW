@@ -454,6 +454,27 @@ class AppLocalizationsFr extends AppLocalizations {
   String get onboardingSkip => 'Passer';
 
   @override
+  String get showOnboardingAgain => 'Montrer le tutoriel à nouveau';
+
+  @override
+  String get showOnboardingAgainTooltip => 'Réinitialiser et afficher le tutoriel';
+
+  @override
+  String get resetAppTitle => 'Réinitialiser l\'application';
+
+  @override
+  String get resetAppDescription => 'Supprimer toutes les données locales de l\'application (tâches, projets, boîte de réception, revues) et réinitialiser les paramètres par défaut.';
+
+  @override
+  String get resetAppConfirm => 'Êtes‑vous sûr de vouloir supprimer définitivement toutes les données locales ? Cette action est irréversible.';
+
+  @override
+  String get resetAppButton => 'Réinitialiser';
+
+  @override
+  String get resetAppDone => 'Réinitialisation terminée';
+
+  @override
   String get onboardingStep1Extra => 'Astuce : gardez les saisies courtes — titre + une ligne suffisent souvent.';
 
   @override
