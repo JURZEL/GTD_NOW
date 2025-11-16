@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:gtd_student/l10n/app_localizations.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+import 'package:gtd_student/data/local/hive_boxes.dart';
 
 import 'package:gtd_student/core/providers.dart';
 // hive_boxes not needed directly here
@@ -256,6 +258,58 @@ class NotificationsSettingsPage extends ConsumerWidget {
                   child: Text(AppLocalizations.of(context)!.clearAll),
                 ),
               ),
+            const SizedBox(height: 12),
+            // Full app reset — clear all data (tasks, projects, inbox, review, fallback) and reset settings
+            const Divider(),
+            const SizedBox(height: 8),
+            Text(AppLocalizations.of(context)!.resetAppTitle, style: const TextStyle(fontWeight: FontWeight.bold)),
+            const SizedBox(height: 8),
+            Text(AppLocalizations.of(context)!.resetAppDescription),
+            const SizedBox(height: 12),
+            FilledButton.icon(
+              onPressed: () async {
+                final messenger = ScaffoldMessenger.of(context);
+                final resetDoneMsg = AppLocalizations.of(context)!.resetAppDone;
+                final ok = await showDialog<bool>(
+                  context: context,
+                  builder: (dCtx) => AlertDialog(
+                    title: Text(AppLocalizations.of(dCtx)!.resetAppTitle),
+                    content: Text(AppLocalizations.of(dCtx)!.resetAppConfirm),
+                    actions: [
+                      TextButton(onPressed: () => Navigator.of(dCtx).pop(false), child: Text(AppLocalizations.of(dCtx)!.cancel)),
+                      FilledButton(onPressed: () => Navigator.of(dCtx).pop(true), child: Text(AppLocalizations.of(dCtx)!.resetAppButton)),
+                    ],
+                  ),
+                );
+                if (ok != true) return;
+
+                // Clear boxes
+                if (Hive.isBoxOpen(HiveBoxes.tasks)) await Hive.box(HiveBoxes.tasks).clear();
+                if (Hive.isBoxOpen(HiveBoxes.projects)) await Hive.box(HiveBoxes.projects).clear();
+                if (Hive.isBoxOpen(HiveBoxes.inbox)) await Hive.box(HiveBoxes.inbox).clear();
+                if (Hive.isBoxOpen(HiveBoxes.review)) await Hive.box(HiveBoxes.review).clear();
+                if (Hive.isBoxOpen(HiveBoxes.fallbackNotifications)) await Hive.box(HiveBoxes.fallbackNotifications).clear();
+
+                // Reset settings fully (clear & reapply defaults)
+                if (Hive.isBoxOpen(HiveBoxes.settings)) await Hive.box(HiveBoxes.settings).clear();
+
+                // Reset providers and defaults
+                await ref.read(settingsRepositoryProvider).setOnboardingSeen(false);
+                await ref.read(appLocaleProvider.notifier).setLocale(null);
+                await ref.read(notificationsEnabledProvider.notifier).setEnabled(true);
+                await ref.read(appThemeModeProvider.notifier).setMode(ThemeMode.system);
+                await ref.read(snoozePresetsProvider.notifier).setPresets([10, 30, 60]);
+
+                // Invalidate providers to refresh UI
+                ref.invalidate(tasksProvider);
+                ref.invalidate(projectsProvider);
+                ref.invalidate(inboxItemsProvider);
+
+                messenger.showSnackBar(SnackBar(content: Text(resetDoneMsg)));
+              },
+              icon: const Icon(Icons.restart_alt),
+              label: Text(AppLocalizations.of(context)!.resetAppButton),
+            ),
           ],
         ),
       ),

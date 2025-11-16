@@ -110,6 +110,11 @@
   ,"onboardingSkip": "Überspringen"
   ,"showOnboardingAgain": "Tutorial erneut anzeigen"
   ,"showOnboardingAgainTooltip": "Tutorial zurücksetzen und erneut anzeigen"
+  ,"resetAppTitle": "App zurücksetzen"
+  ,"resetAppDescription": "Alle lokalen App‑Daten löschen (Tasks, Projekte, Inbox, Reviews) und alle Einstellungen zurücksetzen."
+  ,"resetAppConfirm": "Bist du sicher, dass du ALLE lokalen Daten unwiderruflich löschen möchtest?"
+  ,"resetAppButton": "App zurücksetzen"
+  ,"resetAppDone": "App zurückgesetzt"
   ,"@exportLabel": { "description": "Label für den Export-Button im Backup-Bereich" }
   ,"importLabel": "Importieren"
   ,"@importLabel": { "description": "Label für den Import-Button im Backup-Bereich" }
