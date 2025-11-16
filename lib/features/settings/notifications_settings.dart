@@ -289,6 +289,8 @@ class NotificationsSettingsPage extends ConsumerWidget {
                 if (Hive.isBoxOpen(HiveBoxes.inbox)) await Hive.box(HiveBoxes.inbox).clear();
                 if (Hive.isBoxOpen(HiveBoxes.review)) await Hive.box(HiveBoxes.review).clear();
                 if (Hive.isBoxOpen(HiveBoxes.fallbackNotifications)) await Hive.box(HiveBoxes.fallbackNotifications).clear();
+                // Cancel any scheduled system notifications where possible
+                await notificationService.cancelAll();
 
                 // Reset settings fully (clear & reapply defaults)
                 if (Hive.isBoxOpen(HiveBoxes.settings)) await Hive.box(HiveBoxes.settings).clear();
