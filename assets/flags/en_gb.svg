@@ -1,35 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" width="300" height="200">
-  <!--
-    Even more accurate Union Jack approximation.
-    - The flag proportion is 1:2 (height to width). viewBox 0 0 60 30 maps to that ratio.
-    - White diagonals (saltire) use polygons to preserve sharp joins.
-    - Narrow red diagonals are offset inside the white ones to mimic the fimbriation.
-    - Central white fimbriation with red cross overlays the white cross.
-    This approaches correct geometry to look good even at small sizes.
-  -->
-  <rect width="60" height="30" fill="#012169" />
+  <!-- United Kingdom — simplified Union Jack, full-bleed within 3x2 viewBox.
+       This version uses polygons for diagonals and rectangles for central cross,
+       aiming for cleanness at small icon sizes. -->
+  <rect width="3" height="2" fill="#012169" />
 
-  <!-- White diagonal saltire (approx with polygons) -->
-    <rect width="3" height="2" fill="#012169" />
+  <!-- White diagonal saltires (thick white bands) -->
+  <polygon fill="#ffffff" points="0,0 0.18,0 1.5,0.95 2.82,0 3,0 3,0.18 1.5,1.05 3,1.92 3,2 2.82,2 1.5,1.05 0.18,2 0,2 0,1.92 1.5,1.05 0,0.18" />
 
-    <!-- Align to other flags by adding identical inner padding/padding scale -->
-    <g transform="translate(0.15,0.12) scale(0.82)">
+  <!-- Red diagonal cross (narrow) -->
+  <polygon fill="#C8102E" points="0,0 0.08,0 1.5,0.85 2.92,0 3,0 3,0.08 1.5,0.9 3,1.72 3,2 2.92,2 1.5,1.15 0.08,2 0,2 0,1.72 1.5,1.15 0,0.08" />
 
-      <!-- White diagonal saltires (thick white bands) -->
-      <line x1="0" y1="0" x2="3" y2="2" stroke="#ffffff" stroke-width="0.35" stroke-linecap="butt" />
-      <line x1="0" y1="2" x2="3" y2="0" stroke="#ffffff" stroke-width="0.35" stroke-linecap="butt" />
+  <!-- Central white fimbriation -->
+  <rect x="1.02" y="0" width="0.96" height="2" fill="#ffffff" />
+  <rect x="0" y="0.9" width="3" height="0.2" fill="#ffffff" />
 
-      <!-- Thin red diagonals inside white saltire -->
-      <line x1="0" y1="0" x2="3" y2="2" stroke="#C8102E" stroke-width="0.2" stroke-linecap="butt" />
-      <line x1="0" y1="2" x2="3" y2="0" stroke="#C8102E" stroke-width="0.2" stroke-linecap="butt" />
-
-      <!-- Central white fimbriation -->
-      <rect x="1.02" y="0" width="0.96" height="2" fill="#ffffff" />
-      <rect x="0" y="0.9" width="3" height="0.2" fill="#ffffff" />
-
-      <!-- Central red cross -->
-      <rect x="1.2" y="0" width="0.6" height="2" fill="#C8102E" />
-      <rect x="0" y="0.95" width="3" height="0.1" fill="#C8102E" />
-
-    </g>
+  <!-- Central red cross -->
+  <rect x="1.2" y="0" width="0.6" height="2" fill="#C8102E" />
+  <rect x="0" y="0.95" width="3" height="0.1" fill="#C8102E" />
 </svg>

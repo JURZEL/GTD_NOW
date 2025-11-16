@@ -1,8 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" width="300" height="200">
-  <!-- Add slight padding/scale so flags visually match other flags (union jack scaled) -->
-  <rect width="3" height="2" fill="#0055A4"/>
-  <g transform="translate(0.15,0.12) scale(0.82)">
-    <rect x="1" width="1" height="2" fill="#fff"/>
-    <rect x="2" width="1" height="2" fill="#EF4135"/>
-  </g>
+  <!-- France — full-bleed vertical tricolour: blue, white, red -->
+  <rect width="1" height="2" fill="#0055A4" />
+  <rect x="1" width="1" height="2" fill="#ffffff" />
+  <rect x="2" width="1" height="2" fill="#EF4135" />
 </svg>
