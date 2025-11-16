@@ -75,6 +75,9 @@ class FakeNotificationService implements NotificationService {
     cancelled.add(id);
   }
 
+  @override
+  Future<void> cancelAll() async {}
+
   // The interface has other methods; implement as no-op
   @override
   Future<bool> requestPermissions() async => true;

@@ -158,6 +158,12 @@ class NotificationService {
     await _fln.cancel(id.hashCode);
   }
 
+  /// Cancel all notifications. Used when app is reset.
+  Future<void> cancelAll() async {
+    if (!_initialized) return;
+    await _fln.cancelAll();
+  }
+
   Future<void> _requestPermissions() async {
     bool granted = true;
 
