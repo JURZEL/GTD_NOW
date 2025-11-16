@@ -119,6 +119,12 @@ class FakeSettingsRepository implements ISettingsRepository {
 
   @override
   Future<void> setSnoozePresets(List<int> presets) async {}
+
+  @override
+  bool onboardingSeen() => false;
+
+  @override
+  Future<void> setOnboardingSeen(bool seen) async {}
 }
 
 void main() {

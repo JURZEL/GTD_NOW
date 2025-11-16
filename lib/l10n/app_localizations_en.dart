@@ -421,6 +421,48 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
+  String get onboardingTitle => 'Welcome to GTD Student';
+
+  @override
+  String get onboardingStep1Title => 'Capture quickly';
+
+  @override
+  String get onboardingStep1Body => 'Use the FAB to quickly capture tasks and ideas into your Inbox.';
+
+  @override
+  String get onboardingStep2Title => 'Process your Inbox';
+
+  @override
+  String get onboardingStep2Body => 'Decide what each item means: do it, delegate it, defer it, or trash it.';
+
+  @override
+  String get onboardingStep3Title => 'Organize & Review';
+
+  @override
+  String get onboardingStep3Body => 'Assign tasks to projects, set due dates and review weekly to keep momentum.';
+
+  @override
+  String get onboardingBack => 'Back';
+
+  @override
+  String get onboardingNext => 'Next';
+
+  @override
+  String get onboardingGetStarted => 'Get started';
+
+  @override
+  String get onboardingSkip => 'Skip';
+
+  @override
+  String get onboardingStep1Extra => 'Tip: Keep captures short — title and a 1‑line note is enough.';
+
+  @override
+  String get onboardingStep2Extra => 'Tip: Use quick decisions — if it takes <2 minutes, do it now.';
+
+  @override
+  String get onboardingStep3Extra => 'Tip: Schedule a weekly review time to keep the system clean.';
+
+  @override
   String get aboutLicenseTitle => 'License';
 
   @override

@@ -14,6 +14,11 @@ abstract class ISettingsRepository {
 
   /// Persist snooze presets
   Future<void> setSnoozePresets(List<int> presets);
+  /// Whether onboarding has been seen by the user.
+  bool onboardingSeen();
+
+  /// Persist onboarding seen flag.
+  Future<void> setOnboardingSeen(bool seen);
 }
 
 class SettingsRepository implements ISettingsRepository {
@@ -41,6 +46,16 @@ class SettingsRepository implements ISettingsRepository {
     } else {
       await _box.put('app_locale', localeTag);
     }
+  }
+
+  /// Whether the user has already seen the onboarding screens.
+  @override
+  bool onboardingSeen() => _box.get('onboarding_seen', defaultValue: false) as bool;
+
+  /// Persist the onboarding seen flag.
+  @override
+  Future<void> setOnboardingSeen(bool seen) async {
+    await _box.put('onboarding_seen', seen);
   }
 
   String themeMode() => _box.get('theme_mode', defaultValue: 'system') as String;

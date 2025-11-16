@@ -13,3 +13,46 @@ This project is open-source. If you find it useful, you can support development:
 
 This project is released under the MIT License — see the `LICENSE` file.
 
+
+
+## Kurzes Tutorial — Workflow der App
+
+Dieses kleine Tutorial erklärt den typischen Workflow, wie die App beim Organisieren von Aufgaben im GTD‑Stil (Getting Things Done) helfen soll.
+
+### 1) Schnell erfassen (Quick capture)
+
+- Nutze die FAB (Floating Action Button) oder die Schnellerfassung, um Gedanken und Aufgaben sofort festzuhalten.
+- Alles geht zunächst in die Inbox — so bleibt dein Kopf frei.
+
+### 2) Inbox verarbeiten
+
+- Öffne die Inbox und entscheide für jeden Eintrag: Löschen, Sofort erledigen, Verschieben in ein Projekt, in die Warteliste oder als Aufgabe mit Fälligkeitsdatum anlegen.
+- Füge bei Bedarf Beschreibung, Kontext und Energie-/Zeitangaben hinzu.
+
+### 3) Projekte anlegen und pflegen
+
+- Sammle zusammengehörige Aufgaben in Projekten. Ein Projekt ist jedes Ergebnis, das mehrere Schritte braucht.
+- Erstelle ein Projekt, weise Aufgaben zu und verwalte Projekt‑Metadaten (Name, Beschreibung).
+
+### 4) Aktionen (Next Actions)
+
+- Die Ansicht "Actions" zeigt unmittelbar anstehende Aufgaben (Next Actions) nach Kontext, Energielevel oder Zeitfenster gefiltert.
+- Markiere Aufgaben als erledigt, verschiebe oder terminiere sie.
+
+### 5) Fälligkeiten & Benachrichtigungen
+
+- Aktiviere Benachrichtigungen in den Einstellungen, damit du zu Fälligkeiten erinnert wirst.
+- Die App nutzt zeitbasierte Benachrichtigungen und (bei Bedarf) Fallback‑Erinnerungen auf Plattformen ohne native Unterstützung.
+
+### 6) Wöchentliche Review
+
+- Verwende die "Review"-Funktion, um regelmäßig alle Projekte und Aufgaben zu überblicken und die nächsten Prioritäten zu setzen.
+
+### Tipps
+
+- Verwende die Schnellerfassung, sobald dir etwas in den Sinn kommt. Verarbeite die Inbox in kurzen, regelmäßigen Sessions.
+- Nutze Filter (Kontext, Energielevel, Zeitfenster), um passende Aufgaben auszuwählen.
+- In den Einstellungen kannst du die App‑Sprache, Benachrichtigungen und Export/Import konfigurieren.
+
+Wenn du möchtest, kann ich dieses Tutorial noch als separate `TUTORIAL.md` auslagern, mit Screenshots ergänzen oder eine kurze Onboarding‑Seite in der App implementieren.
+

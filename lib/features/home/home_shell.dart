@@ -11,6 +11,7 @@ import '../search/gtd_search_delegate.dart';
 import 'quick_capture_sheet.dart';
 import '../settings/notifications_settings.dart';
 import '../settings/about_page.dart';
+import '../onboarding/onboarding_page.dart';
 
 class HomeShell extends ConsumerStatefulWidget {
   const HomeShell({super.key});
@@ -128,6 +129,15 @@ class _HomeShellState extends ConsumerState<HomeShell> {
         linuxDefaultActionName: loc.linuxNotificationActionOpen,
       );
     }
+
+    // Show onboarding on first run (if not seen)
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+      final repo = ref.read(settingsRepositoryProvider);
+      if (!repo.onboardingSeen()) {
+        // Open onboarding as a full route; when closed, flag is already set by the page.
+        await Navigator.of(context).push(MaterialPageRoute(builder: (_) => const OnboardingPage()));
+      }
+    });
   }
 
   Future<void> _showQuickCapture(BuildContext context) async {

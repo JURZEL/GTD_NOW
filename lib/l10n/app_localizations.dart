@@ -853,6 +853,90 @@ abstract class AppLocalizations {
   /// **'+{count}'**
   String overflowCount(Object count);
 
+  /// No description provided for @onboardingTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Welcome to GTD Student'**
+  String get onboardingTitle;
+
+  /// No description provided for @onboardingStep1Title.
+  ///
+  /// In en, this message translates to:
+  /// **'Capture quickly'**
+  String get onboardingStep1Title;
+
+  /// No description provided for @onboardingStep1Body.
+  ///
+  /// In en, this message translates to:
+  /// **'Use the FAB to quickly capture tasks and ideas into your Inbox.'**
+  String get onboardingStep1Body;
+
+  /// No description provided for @onboardingStep2Title.
+  ///
+  /// In en, this message translates to:
+  /// **'Process your Inbox'**
+  String get onboardingStep2Title;
+
+  /// No description provided for @onboardingStep2Body.
+  ///
+  /// In en, this message translates to:
+  /// **'Decide what each item means: do it, delegate it, defer it, or trash it.'**
+  String get onboardingStep2Body;
+
+  /// No description provided for @onboardingStep3Title.
+  ///
+  /// In en, this message translates to:
+  /// **'Organize & Review'**
+  String get onboardingStep3Title;
+
+  /// No description provided for @onboardingStep3Body.
+  ///
+  /// In en, this message translates to:
+  /// **'Assign tasks to projects, set due dates and review weekly to keep momentum.'**
+  String get onboardingStep3Body;
+
+  /// No description provided for @onboardingBack.
+  ///
+  /// In en, this message translates to:
+  /// **'Back'**
+  String get onboardingBack;
+
+  /// No description provided for @onboardingNext.
+  ///
+  /// In en, this message translates to:
+  /// **'Next'**
+  String get onboardingNext;
+
+  /// No description provided for @onboardingGetStarted.
+  ///
+  /// In en, this message translates to:
+  /// **'Get started'**
+  String get onboardingGetStarted;
+
+  /// No description provided for @onboardingSkip.
+  ///
+  /// In en, this message translates to:
+  /// **'Skip'**
+  String get onboardingSkip;
+
+  /// No description provided for @onboardingStep1Extra.
+  ///
+  /// In en, this message translates to:
+  /// **'Tip: Keep captures short — title and a 1‑line note is enough.'**
+  String get onboardingStep1Extra;
+
+  /// No description provided for @onboardingStep2Extra.
+  ///
+  /// In en, this message translates to:
+  /// **'Tip: Use quick decisions — if it takes <2 minutes, do it now.'**
+  String get onboardingStep2Extra;
+
+  /// No description provided for @onboardingStep3Extra.
+  ///
+  /// In en, this message translates to:
+  /// **'Tip: Schedule a weekly review time to keep the system clean.'**
+  String get onboardingStep3Extra;
+
   /// No description provided for @aboutLicenseTitle.
   ///
   /// In en, this message translates to:

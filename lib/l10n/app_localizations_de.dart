@@ -421,6 +421,48 @@ class AppLocalizationsDe extends AppLocalizations {
   }
 
   @override
+  String get onboardingTitle => 'Willkommen bei GTD Student';
+
+  @override
+  String get onboardingStep1Title => 'Schnell erfassen';
+
+  @override
+  String get onboardingStep1Body => 'Nutze den FAB, um Gedanken und Aufgaben schnell in deine Inbox zu erfassen.';
+
+  @override
+  String get onboardingStep2Title => 'Inbox verarbeiten';
+
+  @override
+  String get onboardingStep2Body => 'Entscheide für jeden Eintrag: sofort erledigen, delegieren, auf später verschieben oder löschen.';
+
+  @override
+  String get onboardingStep3Title => 'Organisieren & Review';
+
+  @override
+  String get onboardingStep3Body => 'Weise Aufgaben Projekten zu, setze Fälligkeitsdaten und prüfe wöchentlich den Fortschritt.';
+
+  @override
+  String get onboardingBack => 'Zurück';
+
+  @override
+  String get onboardingNext => 'Weiter';
+
+  @override
+  String get onboardingGetStarted => 'Los geht\'s';
+
+  @override
+  String get onboardingSkip => 'Überspringen';
+
+  @override
+  String get onboardingStep1Extra => 'Tipp: Halte Erfassungen kurz — Titel + 1‑Zeile Notiz reichen meist aus.';
+
+  @override
+  String get onboardingStep2Extra => 'Tipp: Triff schnelle Entscheidungen — dauert es <2 Minuten, erledige es direkt.';
+
+  @override
+  String get onboardingStep3Extra => 'Tipp: Plane eine wöchentliche Review‑Zeit ein, um Ordnung zu halten.';
+
+  @override
   String get aboutLicenseTitle => 'Lizenz';
 
   @override
